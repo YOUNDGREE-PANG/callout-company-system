@@ -1,0 +1,33 @@
+<?php
+
+return [
+    'Id'            => '序号',
+    'Mission_name'  => '所属任务名',
+    'User_name'     => '分配人员',
+    'Tell'          => '电话号码',
+    'Missionid'     => '所属任务ID',
+    'Staff_id'      => '被分配员工ID',
+    'Already'       => '是否已拨打',
+    'Departmentid'  => '部门ID',
+    'Success_code'  => '办理状态码',
+    'Success_info'  => '办理状态',
+    'Set_meal'      => '套餐',
+    'Price'         => '套餐费',
+    'Discount'      => '折扣',
+    'After'         => '折后价格',
+    'Infact'        => '实际套餐费',
+    'Surplus'       => '月节省费用',
+    'R_business'    => '推荐业务',
+    'Insert_date'   => '分配日期',
+    'Mkt_sit'       => '营销情况',
+    'Remarks'       => '备注',
+    'Call_date'     => '末次拨打时间',
+    'Last_seconds'  => '末次通话秒数',
+    'End_time'      => '到期时间',
+    'Search_time'   => '查询时间',
+    'Remainder'     => '套餐金额',
+    'Area'          => '所属区县',
+    'Treaty'        => '大合约',
+    'Info'          => '活动信息',
+    'Search_person' => '查询人员'
+];
