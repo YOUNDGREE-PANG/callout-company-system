@@ -1,0 +1,39 @@
+
+
+<div class="panel panel-default panel-intro">
+          <div class="panel-heading">
+  {:build_heading(null,FALSE)}
+        <ul class="nav nav-tabs" data-field="already">
+            <li class="{:$Think.get.already === null ? 'active' : ''}"><a href="#t-all" data-value="" data-toggle="tab">{:__('All')}</a></li>
+      
+            {foreach name="type" item="vo" length="2"}
+           
+            <li class="{:$Think.get.already === (string)$key? 'active' : ''}"><a href="#{$key}" data-value="{$key}" data-toggle="tab">{$vo}</a></li>
+            {/foreach}
+            
+        </ul>
+ 
+
+   </div>
+    <div class="panel-body">
+        <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade active in" id="one">
+                <div class="widget-body no-padding">
+                    <div id="toolbar" class="toolbar">
+                        <a href="javascript:;" class="btn btn-info btn-refresh" title="{:__('Refresh')}" ><i class="fa fa-refresh"></i> </a>
+                   
+      <a href="javascript:;" class="btn btn-primary btn-chooseinvite {:$auth->check('searchnumbers/chooseinvite')?'':'hide'} " data-shade="0.5"  data-area='["50","50"]'  data-title="{:__('Chooseinvite')}"  title="{:__('Chooseinvite')}" ><i class="fa fa-hand-stop-o"></i> {:__('Invite')}</a>                  
+    <a href="javascript:;" class="btn btn-danger btn-import {:$auth->check('searchnumbers/import')?'':'hide'}" title="{:__('Import')}" ><i class="fa fa-upload"></i> {:__('Import')}</a>
+                    </div>
+                    <table id="table" class="table table-striped table-bordered table-hover table-nowrap"
+                           data-operate-chooseinvite="{:$auth->check('searchnumbers/chooseinvite')}"
+                           data-operate-edit="{:$auth->check('searchnumbers/edit')}"
+                           data-operate-del="{:$auth->check('searchnumbers/del')}"
+                           width="100%">
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
