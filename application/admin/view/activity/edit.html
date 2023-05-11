@@ -1,0 +1,63 @@
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Name')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-name" data-rule="required" class="form-control" name="row[name]" type="text" value="{$row.name|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Num')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-num" data-rule="required" class="form-control" name="row[num]" type="number" value="{$row.num|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Start_time')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-start_time" data-rule="required" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[start_time]" type="text" value="{$row.start_time}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('End_time')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-end_time" data-rule="required" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[end_time]" type="text" value="{$row.end_time}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Miss_time')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-miss_time" data-rule="required" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[miss_time]" type="text" value="{$row.miss_time}">
+        </div>
+    </div>
+    
+    
+      <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Adr')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-adr" data-rule="required" class="form-control" placeholder="请输入活动参与范围,如:广东省或广州市或猎德村" name="row[adr]" type="text" value="{$row.adr}">
+        </div>
+    </div>
+    
+    
+        <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Rules')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-rules" class="form-control " rows="5" name="row[rules]" cols="50">{$row.rules}</textarea>
+        </div>
+    </div>
+    
+        <div class="form-group">
+        <label for="c-canuse" class="control-label col-xs-12 col-sm-2">{:__('Canuse')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            {:build_radios('row[canuse]', ['1'=>'开启', '0'=>'关闭'], $row['canuse'])}
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-primary btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>
