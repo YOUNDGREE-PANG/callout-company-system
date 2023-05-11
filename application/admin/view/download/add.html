@@ -1,0 +1,64 @@
+<form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+   <div class="form-group">
+        <label for="c-starttime" class="control-label col-xs-12 col-sm-2">起始时间:</label>
+        <div class="col-xs-12 col-sm-8">
+      <input id="starttime" type="text" class="form-control datetimepicker" name="row[starttime]" placeholder="指定起始时间" />
+        </div>
+    </div>
+    
+       <div class="form-group">
+        <label for="c-endtime" class="control-label col-xs-12 col-sm-2">结束时间:</label>
+        <div class="col-xs-12 col-sm-8">
+      <input id="endtime" type="text" class="form-control datetimepicker" name="row[endtime]" placeholder="指定结束时间" />
+        </div>
+    </div>
+
+   <div class="form-group">
+        <label for="c-departmentid" class="control-label col-xs-12 col-sm-2">所属部门:</label>
+        <div class="col-xs-12 col-sm-8">
+       {:build_select('row[departmentid]',$groupList,$lastdepartmentid,['class'=>'form-control selectpicker', 'data-rule'=>'required','data-live-search'=>'true','id'=>'departmentid'])}
+        </div>
+    </div>
+
+   <div class="form-group">
+        <label for="c-missionid" class="control-label col-xs-12 col-sm-2">所属任务:</label>
+        <div class="col-xs-12 col-sm-8">
+       {:build_select('row[missionid]',$missionList,$lastmissionid,['class'=>'form-control selectpicker', 'data-rule'=>'required','data-live-search'=>'true','id'=>'missionid'])}
+        </div>
+    </div>
+    
+    
+   <div class="form-group">
+        <label for="c-userid" class="control-label col-xs-12 col-sm-2">员工姓名:</label>
+        <div class="col-xs-12 col-sm-4">
+       {:build_select('row[userid]',$usersList,$lastuserid,['class'=>'form-control selectpicker', 'data-rule'=>'required','data-live-search'=>'true','id'=>'userid'])}
+        </div>
+    </div>
+    
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="button" onclick="getit()" class="btn btn-primary ">{:__('OK')}</button>
+            <button type="reset"  class="btn btn-default btn-embossed">{:__('Reset')}</button>
+               
+        </div>
+    </div>
+    
+<script>
+function getit(){
+ var departmentid= document.getElementById("departmentid").value;
+ var missionid= document.getElementById("missionid").value;
+  var userid= document.getElementById("userid").value;
+  var starttime= document.getElementById("starttime").value;
+  var endtime= document.getElementById("endtime").value;
+ var url="https://www.huikeyueke.cn/VQEegRMOwt.php/download/out?starttime="+starttime+"&endtime="+endtime+"&userid="+userid+"&missionid="+missionid+"&departmentid="+departmentid;
+
+window.open(url)
+  alert(url);
+}
+
+
+</script>
+    
+</form>
