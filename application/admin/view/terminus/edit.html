@@ -1,0 +1,114 @@
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Area')}:</label>
+        <div class="col-xs-12 col-sm-8">
+     {:build_select('row[area]',$counties,$row.area,['class'=>'form-control selectpicker', 'data-rule'=>'required','data-live-search'=>'true'])}
+          </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Municipality')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-municipality" data-rule="required" class="form-control" name="row[municipality]" type="text" value="{$row.municipality|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Shop_name')}:</label>
+        <div class="col-xs-12 col-sm-8">
+      {:build_select('row[shop_name]',$shops,$row.shop_name,['class'=>'form-control selectpicker', 'data-rule'=>'required','data-live-search'=>'true'])}
+             </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Rebate_info')}:</label>
+        <div class="col-xs-12 col-sm-8">
+     {:build_select('row[rebate_info]',$campaign,$row.rebate_info,['class'=>'form-control selectpicker', 'data-rule'=>'required','data-live-search'=>'true'])}
+        
+     </div>
+    </div>
+    
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Tell')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-tell" data-rule="required" class="form-control" name="row[tell]" type="text" value="{$row.tell|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Entry_time')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-entry_time" data-rule="required" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[entry_time]" type="text" value="{$row.entry_time}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Product')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-product" data-rule="required" class="form-control " rows="5" name="row[product]" cols="50">{$row.product|htmlentities}</textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Cost')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-cost" data-rule="required" class="form-control" name="row[cost]" type="number" value="{$row.cost|htmlentities}">
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Kind')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            {:build_radios('row[kind]',$kind,$row.kind)} </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Entry_date')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-entry_date" data-rule="required" class="form-control datetimepicker" data-date-format="YYYY-MM-DD" data-use-current="true" name="row[entry_date]" type="text" value="{$row.entry_date}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Miss_date')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-miss_date" data-rule="required" class="form-control datetimepicker" data-date-format="YYYY-MM-DD" data-use-current="true" name="row[miss_date]" type="text" value="{$row.miss_date}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Price')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-price" data-rule="required" class="form-control" name="row[price]" type="number" value="{$row.price|htmlentities}">
+        </div>
+    </div>
+   
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Pro_number')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-pro_number" data-rule="required" class="form-control" name="row[pro_number]" type="number" value="{$row.pro_number|htmlentities}">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Comm_number')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-comm_number" data-rule="required" class="form-control" name="row[comm_number]" type="text" value="{$row.comm_number|htmlentities}">
+        </div>
+    </div>
+ 
+    
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Mission_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+         {:build_select('row[mission_id]',$missions,$row.mission_id,['class'=>'form-control selectpicker', 'data-rule'=>'required','data-live-search'=>'true'])}
+            </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Quota')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-quota" data-rule="required" class="form-control" name="row[quota]" type="number" value="{$row.quota|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-primary btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>
