@@ -1,0 +1,65 @@
+{
+  "id": "3729851",
+  "name": "小移营销",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5444320",
+      "name": "机型",
+      "font_class": "jixing",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "7712233",
+      "name": "意向学员",
+      "font_class": "yixiangxueyuan",
+      "unicode": "e72c",
+      "unicode_decimal": 59180
+    },
+    {
+      "icon_id": "11058856",
+      "name": "小程序",
+      "font_class": "xiaochengxu",
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    },
+    {
+      "icon_id": "17772574",
+      "name": "企业微信",
+      "font_class": "xingzhuang",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "4237201",
+      "name": "客户",
+      "font_class": "kehu1",
+      "unicode": "e697",
+      "unicode_decimal": 59031
+    },
+    {
+      "icon_id": "351762",
+      "name": "企业入驻",
+      "font_class": "qiyeruzhu",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "1817680",
+      "name": "客户",
+      "font_class": "kehu",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "5809195",
+      "name": "商家",
+      "font_class": "shangjia",
+      "unicode": "e690",
+      "unicode_decimal": 59024
+    }
+  ]
+}
