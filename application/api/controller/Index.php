@@ -222,8 +222,8 @@ class Index extends Api
      * @ApiReturn   ({'code':'1','msg':'获取手机号码成功!'})
      */
     public function getphonenumber(){   
-        $appid = "wx278b96238b507b82";
-    	$appsecret = "903dec1bd69c902996938981fe40ea1c";
+        $appid = "wx********";
+    	$appsecret = "903d**********1c";
     	$url="https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=".$appid."&secret=".$appsecret;
         $code=$this->request->post("code");
         $departmentid=$this->request->post("departmentid");
@@ -536,8 +536,8 @@ class Index extends Api
   public function getcode(){
      
      $tell=$this->request->post("tell");
-     $appid = "wx278b96238b507b82";
-    	$appsecret = "903dec1bd69c902996938981fe40ea1c";
+     $appid = "wx278*****";
+    	$appsecret = "9******************40**";
     	$url="https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=".$appid."&secret=".$appsecret;
 
         //获取access_token并赋值给变量
