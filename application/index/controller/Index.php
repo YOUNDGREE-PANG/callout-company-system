@@ -45,9 +45,9 @@ class Index extends Frontend
     {
 
 
-$encodingAesKey = "vJfeXKmsNe5GN45tywcuhPjOThesd9tNqJMBcoJ9Lal";
-$token = "xpPimKf4KWSH8";
-$corpId = "wwe2d1cb226a3499fe";
+$encodingAesKey = "vJfeXKm*************JMBcoJ9Lal";
+$token = "xpPim*****";
+$corpId = "ww**********99fe";
  
 $sVerifyMsgSig =$this->request->param("msg_signature");
 
